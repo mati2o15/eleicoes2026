@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Segundo turno 2026 – Guia do eleitor</title>
+<style>
+:root{--bg:#f6f7f4;--card:#fff;--tx:#18211c;--mut:#5b665f;--ac:#0b7a43;--ac2:#f2b705;--bd:#dde2dc;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1512;--card:#18211c;--tx:#eef2ee;--mut:#9aa7a0;--ac:#3ecf8a;--ac2:#f2c94c;--bd:#2a3730}}
+:root[data-theme="dark"]{--bg:#0f1512;--card:#18211c;--tx:#eef2ee;--mut:#9aa7a0;--ac:#3ecf8a;--ac2:#f2c94c;--bd:#2a3730}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.w{max-width:860px;margin:0 auto;padding:20px 16px 48px}
+header{padding:28px 0 8px}
+.tag{display:inline-block;background:var(--ac);color:#fff;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:99px}
+h1{font-size:clamp(28px,6vw,44px);line-height:1.1;margin:12px 0 8px}
+h2{font-size:22px;margin:36px 0 12px}
+p{margin:0 0 10px}
+.mut{color:var(--mut)}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:18px}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.cd{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.cd div{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:10px 14px;min-width:72px;text-align:center}
+.cd b{display:block;font-size:26px;font-variant-numeric:tabular-nums}
+.cd span{font-size:12px;color:var(--mut)}
+.cand h3{margin:0 0 2px;font-size:20px}
+.pct{font-size:30px;font-weight:800;color:var(--ac);margin:8px 0 0}
+.bar{height:8px;border-radius:99px;background:var(--bd);overflow:hidden;margin-top:6px}
+.bar i{display:block;height:100%;background:var(--ac)}
+.scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:480px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--bd)}
+th{font-size:13px;color:var(--mut);text-transform:uppercase;letter-spacing:.05em}
+ul{padding-left:20px;margin:0}
+li{margin-bottom:6px}
+a{color:var(--ac)}
+.btn{display:inline-block;background:var(--ac);color:#fff;text-decoration:none;font-weight:700;padding:11px 18px;border-radius:10px;margin:4px 8px 4px 0}
+.note{border-left:4px solid var(--ac2);padding-left:12px}
+footer{margin-top:40px;font-size:13px;color:var(--mut)}
+:root:root:root{--bg:#0b7a43;--card:#08603a;--tx:#ffffff;--mut:#e8f5ec;--ac:#ffd400;--ac2:#ffd400;--bd:rgba(255,212,0,.45);color-scheme:dark}
+body{background:#0b7a43;color:#ffffff;border-top:10px solid #ffd400}
+.btn,.tag{color:#064d2a !important}
+</style>
+</head>
+<body>
+<div class="w">
+<header>
+  <span class="tag">Eleições 2026</span>
+  <h1>Segundo turno: domingo, 25 de outubro</h1>
+  <p class="mut">Votação das 8h às 17h (horário de Brasília). Informações públicas e sem viés, com base em fontes jornalísticas e na Justiça Eleitoral.</p>
+  <div class="cd" id="cd" aria-live="polite"></div>
+  <p style="margin-top:14px"><a class="btn" href="https://resultados.tse.jus.br" target="_blank" rel="noopener">Resultado ao vivo (TSE)</a><a class="btn" href="https://agenciabrasil.ebc.com.br" target="_blank" rel="noopener">Apuração ao vivo (Agência Brasil)</a></p>
+  <p class="note" style="font-size:clamp(19px,4.5vw,26px);line-height:1.35;font-weight:600;background:#064d2a;color:#ffffff;border:3px solid #ffd400;border-left-width:10px;border-radius:12px;padding:16px 18px;margin:18px 0"><b style="color:#ffd400">Leitura dos dados do TSE:</b> a apuração do TSE começou às 17h (horário de Brasília) de domingo, 25/10.<span id="topo-res" style="display:block;margin-top:10px"><b style="color:#ffd400">Resultado:</b> carregando do TSE…</span></p>
+</header>
+
+<h2>Escolha seu estado</h2>
+<div class="card">
+<label for="uf" class="mut">Estados com 2º turno para governador: veja os candidatos e os resultados</label>
+<select id="uf" style="display:block;width:100%;margin:8px 0 14px;padding:11px;font-size:16px;border-radius:10px;border:1px solid var(--bd);background:var(--bg);color:var(--tx)"></select>
+<div id="estado"><p class="mut">Selecione um estado acima.</p></div>
+</div>
+
+<h2>Presidente da República</h2>
+<p class="mut"><b>Resultado primeiro turno</b> [<a href="https://www.acessa.com/politica/2026/10/amp/341650-quando-sera-o-segundo-turno-das-eleicoes-veja-a-data.html" target="_blank" rel="noopener">referência: Agência Brasil</a>]</p>
+<div class="grid">
+  <div class="card cand">
+    <h3>Flávio Bolsonaro</h3><div class="mut">PL</div>
+    <div class="pct">47,03%</div><div class="mut">dos votos válidos no 1º turno (56.104.268 votos)</div>
+    <div class="bar"><i style="width:47.03%"></i></div>
+  </div>
+  <div class="card cand">
+    <h3>Luiz Inácio Lula da Silva</h3><div class="mut">PT</div>
+    <div class="pct">45,16%</div><div class="mut">dos votos válidos no 1º turno (53.876.617 votos)</div>
+    <div class="bar"><i style="width:45.16%"></i></div>
+  </div>
+</div>
+<p class="mut" style="margin-top:10px">Nenhum candidato passou de 50% dos votos válidos no 1º turno, realizado em 4 de outubro. No 2º turno vence quem tiver mais votos válidos.</p>
+
+<h2>Últimas pesquisas (2º turno, presidente)</h2>
+<div class="card scroll">
+<table>
+<thead><tr><th>Instituto</th><th>Divulgação</th><th>Flávio Bolsonaro (PL)</th><th>Lula (PT)</th></tr></thead>
+<tbody>
+<tr><td><a href="https://portaln10.com.br/politica/eleicoes/pesquisa-cnt-mda-mostra-flavio-com-507-e-lula-com-493-dos-votos-validos-na-vespera-do-2o-turno-356076/" target="_blank" rel="noopener">CNT/MDA</a></td><td>24/10</td><td>50,7% dos válidos</td><td>49,3% dos válidos</td></tr>
+<tr><td><a href="https://www.cartacapital.com.br/politica/os-detalhes-da-ultima-pesquisa-datafolha-sobre-lula-x-flavio-bolsonaro-no-2o-turno/" target="_blank" rel="noopener">Datafolha</a></td><td>22/10</td><td>50% dos válidos (47% do total)</td><td>50% dos válidos (46% do total)</td></tr>
+<tr><td><a href="https://www.em.com.br/politica/2026/10/7526864-quaest-divulga-ultima-pesquisa-antes-do-segundo-turno-neste-sabado.html" target="_blank" rel="noopener">Quaest</a></td><td>21/10</td><td>45% do total</td><td>44% do total</td></tr>
+</tbody>
+</table>
+</div>
+<p class="mut" style="margin-top:10px">Votos válidos excluem brancos, nulos e indecisos. Datafolha e Quaest trabalham com margem de erro de cerca de 2 pontos para mais ou para menos, e as diferenças acima são menores que isso. Pesquisa mostra intenção de voto em um momento, não é resultado. Pode haver rodadas mais recentes que não estão incluídas.</p>
+
+<h2>Como votar</h2>
+<div class="card">
+<ul>
+<li>Leve um documento oficial com foto. O título de eleitor em papel não é obrigatório, mas o e-Título ajuda a localizar sua seção.</li>
+<li>O TSE recomenda levar anotados os números dos candidatos, para evitar erros de digitação.</li>
+<li>Quem não votou no 1º turno pode votar no 2º, desde que a situação do título esteja regular.</li>
+<li>O voto é facultativo para jovens de 16 e 17 anos, maiores de 70 anos e analfabetos.</li>
+<li>Confirme seu local de votação antes de sair de casa.</li>
+</ul>
+</div>
+
+<h2>Resultados e fontes oficiais</h2>
+<div class="card note">
+<p id="status" class="mut">Carregando…</p>
+<div id="res">Carregando o resultado do TSE…</div>
+<p class="mut">Os números vêm direto do TSE (resultados.tse.jus.br) e são lidos toda vez que a página é aberta ou recarregada, e a cada 60 segundos. Em caso de diferença, vale sempre o TSE.</p>
+<a class="btn" href="https://resultados.tse.jus.br" target="_blank" rel="noopener">Resultados oficiais (TSE)</a>
+<a class="btn" href="https://www.tse.jus.br" target="_blank" rel="noopener">Site do TSE</a>
+<p class="mut" style="margin-top:14px"><b>Acompanhe também na imprensa</b> (apuração a partir das 17h de domingo, com dados do TSE):</p>
+<a class="btn" href="https://agenciabrasil.ebc.com.br" target="_blank" rel="noopener">Agência Brasil (apuração ao vivo)</a>
+<a class="btn" href="https://www.congressoemfoco.com.br" target="_blank" rel="noopener">Congresso em Foco</a>
+<a class="btn" href="https://www.showmetech.com.br/resultado-eleicoes-2026-em-tempo-real/" target="_blank" rel="noopener">Showmetech (filtro por estado)</a>
+</div>
+
+<footer>
+Dados do 1º turno e candidaturas conforme reportagens da Agência Brasil e outros veículos, consultadas até 25/10/2026. Os números da apuração vêm do TSE. Esta página é informativa e não apoia nenhum candidato. Em caso de divergência, vale o que consta no TSE.
+</footer>
+</div>
+<script>
+(function(){
+var t=new Date("2026-10-25T08:00:00-03:00").getTime(), end=new Date("2026-10-25T17:00:00-03:00").getTime();
+var el=document.getElementById("cd");
+function box(n,l){return '<div><b>'+n+'</b><span>'+l+'</span></div>'}
+function tick(){
+  var now=Date.now();
+  if(now>=end){el.innerHTML='<div><b>Votação encerrada</b><span>Acompanhe a apuração no TSE</span></div>';return}
+  if(now>=t){el.innerHTML='<div><b>Votação em andamento</b><span>Até as 17h (Brasília)</span></div>';return}
+  var s=Math.floor((t-now)/1000),d=Math.floor(s/86400),h=Math.floor(s%86400/3600),m=Math.floor(s%3600/60),x=s%60;
+  el.innerHTML=box(d,"dias")+box(h,"horas")+box(m,"min")+box(x,"seg");
+}
+tick();setInterval(tick,1000);
+})();
+</script>
+<script>
+(function(){
+"use strict";
+var BASE="https://resultados.tse.jus.br/oficial/ele2026/6258/dados/",E6="006258",REFRESH=60000;
+var T1=new Date("2026-10-25T17:00:00-03:00").getTime();
+var UF={ac:"Acre",am:"Amazonas",df:"Distrito Federal",es:"Espírito Santo",rj:"Rio de Janeiro",rn:"Rio Grande do Norte",to:"Tocantins"};
+var GOV={ac:["Mailza Assis (PP)","Alan Rick (Republicanos)"],am:["Omar Aziz (PSD)","Professora Maria do Carmo (PL)"],df:["Celina Leão (PP)","Leandro Grass (PT)"],es:["Lorenzo Pazolini (Republicanos)","Ricardo Ferraço (MDB)"],rj:["Douglas Ruas (PL)","Eduardo Paes (PSD)"],rn:["Allyson (União)","Cadu de Lula (PT)"],to:["Professora Dorinha (União)","Vicentinho Júnior (PSDB)"]};
+var GOV1T={es:["49,65%","34,06%"]};
+var NAMES={"22":"Flávio Bolsonaro (PL)","13":"Lula (PT)"};
+function url(uf,c){return BASE+uf+"/"+uf+"-c000"+c+"-e"+E6+"-u.json"}
+function num(x){
+  if(typeof x==="number")return isFinite(x)?x:0;
+  var s=String(x==null?"0":x).trim();
+  if(s.indexOf(",")<0&&/^\d+\.\d{1,2}$/.test(s))return parseFloat(s);
+  var n=parseFloat(s.replace(/\./g,"").replace(",","."));return isNaN(n)?0:n;
+}
+function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+function pt(n,d){return n.toLocaleString("pt-BR",{minimumFractionDigits:d||0,maximumFractionDigits:d||0})}
+function nome(s){return String(s||"").toLowerCase().replace(/(^|\s)\S/g,function(c){return c.toUpperCase()}).replace(/\s(Da|De|Do|Das|Dos)\s/g,function(m){return m.toLowerCase()})}
+function get(u){
+  var req=fetch(u+"?t="+Date.now(),{cache:"no-store"}).then(function(r){if(!r.ok)throw new Error("HTTP "+r.status);return r.json()});
+  var lim=new Promise(function(_,rej){setTimeout(function(){rej(new Error("tempo esgotado"))},15000)});
+  return Promise.race([req,lim]).catch(function(e){e.fonte=u;throw e});
+}
+/* Junta TODOS os candidatos do arquivo, mesmo que cada coligação traga só um. */
+function coleta(o,acc,dep,frouxo){
+  if(dep>12||o==null||typeof o!=="object")return;
+  if(Array.isArray(o)){for(var i=0;i<o.length;i++)coleta(o[i],acc,dep+1,frouxo);return}
+  var temVoto=o.vap!==undefined||o.pvap!==undefined;
+  var temId=frouxo?(o.n!==undefined||o.nm!==undefined):(o.nm!==undefined||o.sqcand!==undefined||o.nmn!==undefined);
+  if(temVoto&&temId){acc.push(o);return}
+  for(var k in o)coleta(o[k],acc,dep+1,frouxo);
+}
+function achaChave(o,chave,dep){
+  if(dep>12||o==null||typeof o!=="object")return undefined;
+  if(!Array.isArray(o)&&Object.prototype.hasOwnProperty.call(o,chave)&&typeof o[chave]!=="object")return o[chave];
+  for(var k in o){var r=achaChave(o[k],chave,dep+1);if(r!==undefined)return r}
+  return undefined;
+}
+function info(d){
+  var acc=[];coleta(d,acc,0,false);if(!acc.length)coleta(d,acc,0,true);
+  var seen={},list=[];
+  acc.forEach(function(c){var k=String(c.sqcand||c.n||c.nm||("i"+list.length));if(seen[k])return;seen[k]=1;list.push(c)});
+  var soma=list.reduce(function(t,c){return t+num(c.vap)},0);
+  var cands=list.map(function(c){
+    var vap=num(c.vap);
+    return {n:String(c.n||c.nr||""),nm:c.nm||c.nmn||c.nmu||c.nome||"Candidato",vap:vap,p:(c.pvap!==undefined?num(c.pvap):(soma?vap/soma*100:0))};
+  }).sort(function(a,b){return b.vap-a.vap}).slice(0,2);
+  var a=cands.filter(function(c){return c.n==="22"})[0],b=cands.filter(function(c){return c.n==="13"})[0];
+  if(a&&b)cands=[a,b];
+  var pr=achaChave(d,"pst");
+  return {c:cands,soma:soma,total:list.length,pst:pr===undefined?null:num(pr),dg:achaChave(d,"dg"),hg:achaChave(d,"hg"),chaves:Object.keys(d||{}).slice(0,12).join(", ")};
+}
+function rotulo(c){return NAMES[c.n]||(nome(c.nm)+(c.n?" ("+c.n+")":""))}
+function row(c){
+  return '<div style="margin:10px 0"><b>'+esc(rotulo(c))+'</b> <span class="mut">'+pt(c.p,2)+'%</span> <span class="mut">· '+pt(c.vap)+' votos</span><div class="bar"><i style="width:'+Math.min(100,c.p)+'%"></i></div></div>';
+}
+function esperando(x){return x.pst===0||(x.pst===null&&x.soma===0)}
+function pinta(box,x){
+  if(!x.c.length){box.innerHTML='<p class="mut">Sem candidatos nesta resposta do TSE.</p><p class="mut" style="font-size:12px">Diagnóstico: formato diferente do esperado. Chaves: '+esc(x.chaves)+'</p>';return}
+  if(esperando(x)){box.innerHTML='<p class="mut"><b>Aguardando início da apuração</b> (0% das urnas). O resultado aparece aqui sozinho.</p>';return}
+  var h='<p class="mut">'+(x.pst!==null?'Urnas apuradas: '+pt(x.pst,2)+'% · ':'')+'TSE: '+esc(((x.dg||"")+" "+(x.hg||"")).trim()||"horário não informado")+'</p>';
+  x.c.forEach(function(c){h+=row(c)});
+  if(x.pst!==null&&x.pst<30)h+='<p class="mut" style="font-size:14px">Com poucas urnas apuradas, o número não indica o resultado final.</p>';
+  box.innerHTML=h;
+}
+function falha(box,e){
+  if(Date.now()<T1){box.innerHTML='<p><b>O 2º turno é neste domingo, 25 de outubro de 2026</b>, das 8h às 17h (horário de Brasília). A apuração começa às 17h e os números aparecem aqui automaticamente.</p>';return}
+  box.innerHTML='<p style="color:#ffd400"><b>Não consegui ler o TSE agora.</b> Tentando de novo em 1 minuto. Se persistir, use o painel oficial.</p><p class="mut" style="font-size:12px">Detalhe técnico: '+esc(e&&e.message||"erro desconhecido")+(e&&e.fonte?' · <a href="'+esc(e.fonte)+'" target="_blank" rel="noopener">abrir arquivo do TSE</a>':'')+'</p>';
+}
+function topo(x){
+  var t=document.getElementById("topo-res");if(!t)return;
+  if(!x.c.length||esperando(x)){t.innerHTML='<b style="color:#ffd400">Resultado:</b> aguardando início da apuração.';return}
+  t.innerHTML='<b style="color:#ffd400">Resultado até agora'+(x.pst!==null?' ('+pt(x.pst,2)+'% das urnas)':'')+':</b> '+x.c.map(function(c){return esc(rotulo(c))+' '+pt(c.p,2)+'%'}).join(' × ')+' dos votos válidos.'+(x.pst!==null&&x.pst<30?' Com poucas urnas, não indica o resultado final.':'');
+}
+var sel=document.getElementById("uf"),box=document.getElementById("estado"),res=document.getElementById("res");
+var o='<option value="">Selecione um estado…</option>';
+Object.keys(UF).forEach(function(k){o+='<option value="'+k+'">'+UF[k]+'</option>'});
+sel.innerHTML=o;
+try{var last=localStorage.getItem("uf6258");if(last&&UF[last])sel.value=last}catch(e){}
+var h0=(location.hash||"").replace("#","").toLowerCase();if(UF[h0])sel.value=h0;
+function estadoBase(uf){
+  var g=GOV[uf];
+  var h='<h3 style="margin:0 0 8px">'+esc(UF[uf])+'</h3><p><b>Presidente</b>: Flávio Bolsonaro (PL) × Lula (PT)</p><div id="e-pres">Carregando…</div>';
+  h+='<hr style="border:0;border-top:1px solid var(--bd);margin:14px 0"><p><b>Governador</b>: '+esc(g[0])+' × '+esc(g[1])+'</p>';
+  if(GOV1T[uf])h+='<p class="mut">No 1º turno: '+esc(g[0])+' '+GOV1T[uf][0]+' e '+esc(g[1])+' '+GOV1T[uf][1]+' dos votos válidos.</p>';
+  return h+'<div id="e-gov">Carregando…</div>';
+}
+function load(){
+  var ps=[];
+  ps.push(get(url("br",1)).then(function(d){var x=info(d);pinta(res,x);topo(x);return true}).catch(function(e){falha(res,e);var t=document.getElementById("topo-res");if(t)t.innerHTML=Date.now()<T1?'<b style="color:#ffd400">Resultado:</b> a apuração começa às 17h (Brasília).':'<b style="color:#ffd400">Resultado:</b> não consegui ler o TSE agora, tentando de novo em 1 minuto.';return false}));
+  var uf=sel.value;
+  if(!uf){box.innerHTML='<p class="mut">Selecione um estado acima.</p>'}
+  else{
+    if(box.getAttribute("data-uf")!==uf){box.innerHTML=estadoBase(uf);box.setAttribute("data-uf",uf)}
+    ps.push(get(url(uf,1)).then(function(d){pinta(document.getElementById("e-pres"),info(d))}).catch(function(e){falha(document.getElementById("e-pres"),e)}));
+    ps.push(get(url(uf,3)).then(function(d){pinta(document.getElementById("e-gov"),info(d))}).catch(function(e){falha(document.getElementById("e-gov"),e)}));
+  }
+  Promise.all(ps).then(function(r){
+    var st=document.getElementById("status");
+    if(st)st.textContent=r[0]?("Última consulta ao TSE: "+new Date().toLocaleTimeString("pt-BR")):"Sem resposta do TSE neste momento.";
+  });
+}
+sel.addEventListener("change",function(){try{localStorage.setItem("uf6258",sel.value)}catch(e){}load()});
+load();setInterval(function(){if(!document.hidden)load()},REFRESH);
+})();
+</script>
+</body>
+</html>
