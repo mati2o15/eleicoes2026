@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Coxa-Branca | Coritiba Football Club</title>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--verde:#0a5c36;--verde-esc:#06391f;--papel:#eef4ef;--texto:#10201a;--suave:#4b6357;--linha:#c9d9cf;--card:#fff;--tit:#0a5c36;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--papel:#0d1a13;--texto:#e8f1ea;--suave:#9db5a6;--linha:#23402f;--card:#12241a;--tit:#5fd391}}
+:root[data-theme="dark"]{--papel:#0d1a13;--texto:#e8f1ea;--suave:#9db5a6;--linha:#23402f;--card:#12241a;--tit:#5fd391}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}*{box-sizing:border-box}
+body{margin:0;background:var(--papel);color:var(--texto);font:18px/1.6 "Source Serif 4",Georgia,serif}
+h1,h2,h3{font-family:"Big Shoulders Display",Impact,"Arial Narrow",sans-serif;font-weight:900;line-height:.95;margin:0;text-transform:uppercase}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--verde-esc);z-index:10}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:linear-gradient(180deg,#06391f,#0a4a2b);border-bottom:3px solid #fff;box-shadow:0 6px 16px rgba(0,0,0,.2)}
+nav .wrap{display:flex;gap:4px;align-items:center;overflow-x:auto;white-space:nowrap;height:46px;padding:0 12px;scrollbar-width:none}nav .wrap::-webkit-scrollbar{display:none}
+nav b{font:900 18px "Big Shoulders Display",Impact,sans-serif;letter-spacing:.08em;background:#fff;color:#06391f;padding:3px 10px;border-radius:4px;margin-right:10px;flex:none}
+nav button{background:none;border:0;color:#d6e8dc;font:inherit;font-size:14px;font-weight:500;line-height:1.2;padding:6px 12px;border-radius:999px;cursor:pointer;flex:none;transition:background .15s,color .15s}
+nav button::before{margin-right:5px;font-size:13px}
+nav button:hover{background:rgba(255,255,255,.14);color:#fff}
+nav button[aria-selected="true"]{background:#fff;color:#06391f;font-weight:600;box-shadow:0 1px 5px rgba(0,0,0,.3)}
+nav button[data-t="imperio"]::before{content:"🥁"}nav button[data-t="inicio"]::before{content:"🏠"}nav button[data-t="estadio"]::before{content:"🏟️"}nav button[data-t="proximos"]::before{content:"📅"}nav button[data-t="resultados"]::before{content:"⚽"}nav button[data-t="classificacao"]::before{content:"📊"}nav button[data-t="escalacao"]::before{content:"👕"}nav button[data-t="pesquisas"]::before{content:"📋"}nav button[data-t="videos"]::before{content:"🎬"}nav button[data-t="hino"]::before{content:"🎵"}nav button[data-t="noticias"]::before{content:"📰"}
+nav button:focus-visible{outline:3px solid #8be6b3}
+.hero{background:var(--verde);color:#fff;padding:56px 0 0;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 90px,rgba(255,255,255,.05) 90px 180px)}
+.hero .wrap{position:relative}
+.hero h1{font-size:clamp(72px,18vw,190px)}
+.hero p{max-width:34ch;font-size:21px;margin:16px 0 36px;color:#dcece2}
+.duelo{background:var(--card);color:var(--texto);padding:22px 26px;display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:center;text-align:center;border-radius:6px 6px 0 0}
+.duelo .t{font:900 clamp(26px,6vw,46px) "Big Shoulders Display",Impact,sans-serif;text-transform:uppercase}
+.duelo small{grid-column:1/-1;color:var(--suave);font-size:15px;border-top:1px solid var(--linha);padding-top:10px}
+section.tab{padding:56px 0;min-height:60vh}section[hidden]{display:none}
+h2{font-size:clamp(40px,7vw,64px);color:var(--tit);margin-bottom:12px}
+.lead{color:var(--suave);max-width:60ch;margin:0 0 26px;font-size:16px}
+.hist{display:grid;grid-template-columns:1.2fr 1fr;gap:40px}.hist p{margin:0 0 1em;max-width:62ch}
+dl{margin:0;border-top:3px solid var(--verde)}dl div{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--linha)}dt{color:var(--suave)}dd{margin:0;font-weight:600;text-align:right}
+.scroll{overflow-x:auto}table{width:100%;border-collapse:collapse;background:var(--card)}
+th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--linha);font-size:16px}
+th{font:900 19px "Big Shoulders Display",Impact,sans-serif;background:var(--verde);color:#fff;text-transform:uppercase}
+td.p{font-weight:600;white-space:nowrap}.v{color:#117a45;font-weight:600}.d{color:#b3261e;font-weight:600}.e{color:var(--suave);font-weight:600}
+.pitch{position:relative;aspect-ratio:3/4;max-width:560px;margin:0 auto;background:#0e7a45;border:3px solid #fff;border-radius:6px;background-image:linear-gradient(rgba(255,255,255,.35),rgba(255,255,255,.35)),repeating-linear-gradient(0deg,transparent 0 12.5%,rgba(0,0,0,.07) 12.5% 25%);background-size:100% 2px,100% 100%;background-position:0 50%;background-repeat:no-repeat}
+.jog{position:absolute;transform:translate(-50%,-50%);text-align:center;width:22%}
+.jog i{display:block;width:36px;height:36px;border-radius:50%;background:#fff;color:var(--verde-esc);font:900 17px/36px "Big Shoulders Display",Impact,sans-serif;font-style:normal;margin:0 auto 3px}
+.jog span{display:block;color:#fff;font-size:13px;line-height:1.15}
+.bench{max-width:560px;margin:18px auto 0;color:var(--suave);font-size:15px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+a.card{display:block;background:var(--card);border-left:6px solid var(--verde);padding:20px;color:inherit;text-decoration:none}
+a.card:hover,a.card:focus-visible{outline:2px solid var(--verde)}
+a.card h3{font-size:28px;margin-bottom:6px}a.card p{margin:0;color:var(--suave);font-size:15px}
+.aviso{background:var(--card);border-left:6px solid #c58a00;padding:16px 20px;font-size:15px;max-width:68ch;margin:0 0 24px}
+footer{padding:28px 0;font-size:14px;color:var(--suave)}
+@media (max-width:760px){.hist{grid-template-columns:1fr}.duelo{grid-template-columns:1fr}}
+.pg{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin:0 0 28px}.pg div{background:var(--card);border-left:6px solid var(--verde);padding:16px 18px;font-size:16px}.pg h4{font:900 22px "Big Shoulders Display",Impact,sans-serif;text-transform:uppercase;color:var(--tit);margin:0 0 6px}.pg p{margin:0 0 6px}.pg small{color:var(--suave)}
+.fundo{position:fixed;inset:0;z-index:-1;pointer-events:none;color:#0a5c36}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .fundo{color:#5fd391}}
+:root[data-theme="dark"] .fundo{color:#5fd391}
+.fundo .cmp{position:absolute;inset:0;width:100%;height:100%}
+.fundo .esc{position:absolute;left:50%;top:52%;transform:translate(-50%,-50%);width:min(86vw,560px);height:auto}
+.cl td:first-child{border-left:6px solid transparent;font-weight:600}.cl tr.lib td:first-child{border-left-color:#0a8a4a}.cl tr.sul td:first-child{border-left-color:#2b6cb0}.cl tr.reb td:first-child{border-left-color:#b3261e}.cl tr.cori td{background:rgba(10,92,54,.18);font-weight:700}.cl td:nth-child(n+3),.cl th:nth-child(n+3){text-align:center}.cl td{padding:9px 10px}.leg{display:flex;gap:18px;flex-wrap:wrap;font-size:15px;color:var(--suave);margin-top:14px}.leg i{display:inline-block;width:12px;height:12px;margin-right:6px;vertical-align:-1px}
+.sub{display:flex;gap:8px;margin:0 0 16px;flex-wrap:wrap}.sub button{font:inherit;font-size:16px;padding:9px 20px;border-radius:999px;border:2px solid var(--verde);background:transparent;color:var(--tit);cursor:pointer}.sub button[aria-pressed="true"]{background:var(--verde);color:#fff;font-weight:600}.sub button:focus-visible{outline:3px solid #8be6b3;outline-offset:2px}
+</style>
+</head>
+<body>
+<div class="fundo" aria-hidden="true"><svg class="cmp" viewBox="0 0 600 900" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg"><rect x="40" y="40.0" width="520" height="102.5" fill="currentColor" fill-opacity=".05"/><rect x="40" y="245.0" width="520" height="102.5" fill="currentColor" fill-opacity=".05"/><rect x="40" y="450.0" width="520" height="102.5" fill="currentColor" fill-opacity=".05"/><rect x="40" y="655.0" width="520" height="102.5" fill="currentColor" fill-opacity=".05"/>
+<g fill="none" stroke="currentColor" stroke-width="2.5" stroke-opacity=".16">
+<rect x="40" y="40" width="520" height="820"/><line x1="40" y1="450" x2="560" y2="450"/><circle cx="300" cy="450" r="75"/>
+<rect x="150" y="40" width="300" height="130"/><rect x="230" y="40" width="140" height="48"/><path d="M245 170 A75 75 0 0 0 355 170"/>
+<rect x="150" y="730" width="300" height="130"/><rect x="230" y="812" width="140" height="48"/><path d="M245 730 A75 75 0 0 1 355 730"/>
+<path d="M40 58 A18 18 0 0 0 58 40"/><path d="M542 40 A18 18 0 0 0 560 58"/><path d="M40 842 A18 18 0 0 1 58 860"/><path d="M560 842 A18 18 0 0 0 542 860"/></g>
+<g fill="currentColor" fill-opacity=".2"><circle cx="300" cy="450" r="4"/><circle cx="300" cy="125" r="3.5"/><circle cx="300" cy="775" r="3.5"/></g></svg><svg class="esc" viewBox="-20 0 280 300" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="ci"><path d="M120 24 L210 51 V140 C210 206 168 247 120 274 C72 247 30 206 30 140 V51 Z"/></clipPath></defs>
+<path d="M12 268 Q-26 170 8 78" fill="none" stroke="currentColor" stroke-width="2.2" stroke-opacity=".22"/><ellipse cx="1.4" cy="249.4" rx="10" ry="4" transform="rotate(-150.3 6.4 252.4)" fill="currentColor" fill-opacity=".16"/><ellipse cx="11.4" cy="255.4" rx="10" ry="4" transform="rotate(-66.3 6.4 252.4)" fill="currentColor" fill-opacity=".16"/><ellipse cx="-4.6" cy="228.9" rx="10" ry="4" transform="rotate(-146.3 0.4 231.9)" fill="currentColor" fill-opacity=".16"/><ellipse cx="5.4" cy="234.9" rx="10" ry="4" transform="rotate(-62.3 0.4 231.9)" fill="currentColor" fill-opacity=".16"/><ellipse cx="-9.0" cy="208.7" rx="10" ry="4" transform="rotate(-142.1 -4.0 211.7)" fill="currentColor" fill-opacity=".16"/><ellipse cx="1.0" cy="214.7" rx="10" ry="4" transform="rotate(-58.1 -4.0 211.7)" fill="currentColor" fill-opacity=".16"/><ellipse cx="-11.8" cy="188.5" rx="10" ry="4" transform="rotate(-137.7 -6.8 191.5)" fill="currentColor" fill-opacity=".16"/><ellipse cx="-1.8" cy="194.5" rx="10" ry="4" transform="rotate(-53.7 -6.8 191.5)" fill="currentColor" fill-opacity=".16"/><ellipse cx="-13.0" cy="168.5" rx="10" ry="4" transform="rotate(-133.2 -8.0 171.5)" fill="currentColor" fill-opacity=".16"/><ellipse cx="-3.0" cy="174.5" rx="10" ry="4" transform="rotate(-49.2 -8.0 171.5)" fill="currentColor" fill-opacity=".16"/><ellipse cx="-12.6" cy="148.6" rx="10" ry="4" transform="rotate(-128.6 -7.6 151.6)" fill="currentColor" fill-opacity=".16"/><ellipse cx="-2.6" cy="154.6" rx="10" ry="4" transform="rotate(-44.6 -7.6 151.6)" fill="currentColor" fill-opacity=".16"/><ellipse cx="-10.7" cy="128.9" rx="10" ry="4" transform="rotate(-124.0 -5.7 131.9)" fill="currentColor" fill-opacity=".16"/><ellipse cx="-0.7" cy="134.9" rx="10" ry="4" transform="rotate(-40.0 -5.7 131.9)" fill="currentColor" fill-opacity=".16"/><ellipse cx="-7.1" cy="109.2" rx="10" ry="4" transform="rotate(-119.5 -2.1 112.2)" fill="currentColor" fill-opacity=".16"/><ellipse cx="2.9" cy="115.2" rx="10" ry="4" transform="rotate(-35.5 -2.1 112.2)" fill="currentColor" fill-opacity=".16"/><ellipse cx="-2.0" cy="89.8" rx="10" ry="4" transform="rotate(-115.0 3.0 92.8)" fill="currentColor" fill-opacity=".16"/><ellipse cx="8.0" cy="95.8" rx="10" ry="4" transform="rotate(-31.0 3.0 92.8)" fill="currentColor" fill-opacity=".16"/><path d="M228 268 Q266 170 232 78" fill="none" stroke="currentColor" stroke-width="2.2" stroke-opacity=".22"/><ellipse cx="238.6" cy="249.4" rx="10" ry="4" transform="rotate(150.3 233.6 252.4)" fill="currentColor" fill-opacity=".16"/><ellipse cx="228.6" cy="255.4" rx="10" ry="4" transform="rotate(66.3 233.6 252.4)" fill="currentColor" fill-opacity=".16"/><ellipse cx="244.6" cy="228.9" rx="10" ry="4" transform="rotate(146.3 239.6 231.9)" fill="currentColor" fill-opacity=".16"/><ellipse cx="234.6" cy="234.9" rx="10" ry="4" transform="rotate(62.3 239.6 231.9)" fill="currentColor" fill-opacity=".16"/><ellipse cx="249.0" cy="208.7" rx="10" ry="4" transform="rotate(142.1 244.0 211.7)" fill="currentColor" fill-opacity=".16"/><ellipse cx="239.0" cy="214.7" rx="10" ry="4" transform="rotate(58.1 244.0 211.7)" fill="currentColor" fill-opacity=".16"/><ellipse cx="251.8" cy="188.5" rx="10" ry="4" transform="rotate(137.7 246.8 191.5)" fill="currentColor" fill-opacity=".16"/><ellipse cx="241.8" cy="194.5" rx="10" ry="4" transform="rotate(53.7 246.8 191.5)" fill="currentColor" fill-opacity=".16"/><ellipse cx="253.0" cy="168.5" rx="10" ry="4" transform="rotate(133.2 248.0 171.5)" fill="currentColor" fill-opacity=".16"/><ellipse cx="243.0" cy="174.5" rx="10" ry="4" transform="rotate(49.2 248.0 171.5)" fill="currentColor" fill-opacity=".16"/><ellipse cx="252.6" cy="148.6" rx="10" ry="4" transform="rotate(128.6 247.6 151.6)" fill="currentColor" fill-opacity=".16"/><ellipse cx="242.6" cy="154.6" rx="10" ry="4" transform="rotate(44.6 247.6 151.6)" fill="currentColor" fill-opacity=".16"/><ellipse cx="250.7" cy="128.9" rx="10" ry="4" transform="rotate(124.0 245.7 131.9)" fill="currentColor" fill-opacity=".16"/><ellipse cx="240.7" cy="134.9" rx="10" ry="4" transform="rotate(40.0 245.7 131.9)" fill="currentColor" fill-opacity=".16"/><ellipse cx="247.1" cy="109.2" rx="10" ry="4" transform="rotate(119.5 242.1 112.2)" fill="currentColor" fill-opacity=".16"/><ellipse cx="237.1" cy="115.2" rx="10" ry="4" transform="rotate(35.5 242.1 112.2)" fill="currentColor" fill-opacity=".16"/><ellipse cx="242.0" cy="89.8" rx="10" ry="4" transform="rotate(115.0 237.0 92.8)" fill="currentColor" fill-opacity=".16"/><ellipse cx="232.0" cy="95.8" rx="10" ry="4" transform="rotate(31.0 237.0 92.8)" fill="currentColor" fill-opacity=".16"/>
+<path d="M120 8 L226 40 V140 C226 215 178 262 120 292 C62 262 14 215 14 140 V40 Z" fill="currentColor" fill-opacity=".05" stroke="currentColor" stroke-width="6" stroke-opacity=".24" stroke-linejoin="round"/>
+<g clip-path="url(#ci)"><rect x="30" y="20" width="30" height="270" fill="currentColor" fill-opacity=".11"/><rect x="90" y="20" width="30" height="270" fill="currentColor" fill-opacity=".11"/><rect x="150" y="20" width="30" height="270" fill="currentColor" fill-opacity=".11"/><rect x="30" y="51" width="180" height="34" fill="currentColor" fill-opacity=".16"/><rect x="30" y="196" width="180" height="34" fill="currentColor" fill-opacity=".10"/></g>
+<path d="M120 24 L210 51 V140 C210 206 168 247 120 274 C72 247 30 206 30 140 V51 Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-opacity=".28" stroke-linejoin="round"/>
+<text x="120" y="76" text-anchor="middle" font-family="Impact,'Arial Narrow',sans-serif" font-size="21" letter-spacing="4" fill="currentColor" fill-opacity=".34">CORITIBA</text>
+<text x="120" y="172" text-anchor="middle" font-family="Impact,'Arial Narrow',sans-serif" font-size="82" fill="currentColor" fill-opacity=".30">CFC</text>
+<text x="120" y="222" text-anchor="middle" font-family="Impact,'Arial Narrow',sans-serif" font-size="27" letter-spacing="3" fill="currentColor" fill-opacity=".34">1909</text>
+<path d="M120 238 l6 12 13 2 -10 9 3 13 -12 -7 -12 7 3 -13 -10 -9 13 -2z" transform="translate(0 -8) scale(1)" fill="currentColor" fill-opacity="0"/>
+</svg></div>
+<nav><div class="wrap" role="tablist" aria-label="Seções"><b>COXA</b>
+<button role="tab" data-t="inicio">Início</button><button role="tab" data-t="estadio">Estádio</button><button role="tab" data-t="proximos">Jogos</button><button role="tab" data-t="resultados">Resultados</button><button role="tab" data-t="classificacao">Tabela</button><button role="tab" data-t="escalacao">Escalação</button><button role="tab" data-t="pesquisas">Pesquisas</button><button role="tab" data-t="videos">Vídeos</button><button role="tab" data-t="imperio">Império</button><button role="tab" data-t="hino">Hino</button></div></nav>
+
+<section class="tab" id="inicio" style="padding:0">
+  <div class="hero"><div class="wrap"><h1>Coxa-<br>Branca</h1><p>Coritiba Football Club. Verde e branco desde 1909, em casa no Couto Pereira.</p>
+  <div class="duelo"><div class="t">Coritiba</div><div>x</div><div class="t">Grêmio</div><small>Brasileirão, 32ª rodada, segunda-feira, 26/10, às 19h30, no Couto Pereira. Transmissão: Premiere.</small></div></div></div>
+  <div class="wrap" style="padding-top:56px;padding-bottom:56px"><div class="hist"><div><h2>História</h2>
+  <p>O Coritiba foi fundado em 12 de outubro de 1909, em Curitiba, por imigrantes alemães e seus descendentes. É um dos clubes mais tradicionais do futebol brasileiro.</p>
+  <p>Em 1985, o Coxa conquistou o Campeonato Brasileiro, o título mais marcante da sua trajetória. O estádio Major Antônio Couto Pereira é um dos símbolos da cidade.</p></div>
+  <dl><div><dt>Fundação</dt><dd>12 de outubro de 1909</dd></div><div><dt>Cidade</dt><dd>Curitiba, Paraná</dd></div><div><dt>Cores</dt><dd>Verde e branco</dd></div><div><dt>Apelido</dt><dd>Coxa, Coxa-Branca</dd></div><div><dt>Estádio</dt><dd>Major Antônio Couto Pereira</dd></div><div><dt>Título nacional</dt><dd>Brasileirão 1985</dd></div></dl></div></div>
+<div class="wrap" style="padding-bottom:56px">
+  <h2>Títulos</h2>
+  <div class="pg">
+   <div><h4>Campeonato Brasileiro</h4><p style="font:900 44px/1 'Big Shoulders Display',Impact,sans-serif;color:var(--tit);margin:0 0 6px">1 título</p><p>1985. Na final, o Coxa venceu o Bangu nos pênaltis, em um Maracanã lotado. Foi o primeiro título nacional de um time paranaense.</p></div>
+   <div><h4>Série B</h4><p style="font:900 44px/1 'Big Shoulders Display',Impact,sans-serif;color:var(--tit);margin:0 0 6px">3 títulos</p><p>2007, 2010 e 2025. Todos garantiram o acesso à elite do futebol nacional.</p></div>
+   <div><h4>Campeonato Paranaense</h4><p style="font:900 44px/1 'Big Shoulders Display',Impact,sans-serif;color:var(--tit);margin:0 0 6px">39 títulos</p><p>É o maior campeão do estado. O primeiro foi em 1916, e o mais recente, em 2022.</p></div>
+  </div>
+  <h2 style="margin-top:36px">Linha do tempo</h2>
+  <div class="pg">
+   <div><h4>1909</h4><p>Fundação do clube, em 12 de outubro, em Curitiba.</p></div>
+   <div><h4>1915 e 1916</h4><p>Primeira competição oficial, em 1915, e primeiro título paranaense, em 1916.</p></div>
+   <div><h4>1932</h4><p>Inauguração do estádio, que depois ganharia o nome de Major Antônio Couto Pereira.</p></div>
+   <div><h4>1985</h4><p>Campeão brasileiro. O atacante Índio foi um dos destaques daquele time.</p></div>
+   <div><h4>1989 a 1999</h4><p>Anos difíceis: o clube foi rebaixado à terceira divisão em 1989, voltou à elite em 1995 e acabou com um jejum de dez anos sem títulos em 1999.</p></div>
+   <div><h4>2003</h4><p>Campeão paranaense invicto, pela primeira vez.</p></div>
+   <div><h4>2005 a 2010</h4><p>Rebaixado em 2005, campeão da Série B em 2007, rebaixado de novo em 2009 e campeão da Série B outra vez em 2010.</p></div>
+   <div><h4>2013 e 2014</h4><p>Tetracampeão paranaense pela segunda vez, em 2013. Em 2014, a reforma do Couto Pereira lança o setor Pro Tork.</p></div>
+   <div><h4>2017 a 2021</h4><p>Rebaixado em 2017 e em 2020, com acessos em 2019 e 2021.</p></div>
+   <div><h4>2023</h4><p>O Coritiba vira uma SAF, a sociedade anônima do futebol, e é rebaixado no Brasileirão.</p></div>
+   <div><h4>2025</h4><p>Campeão da Série B e de volta à elite. Em julho, o clube celebrou os 40 anos do título de 1985.</p></div>
+  </div>
+  <p class="lead">Fontes: Goal, Band B, Gazeta do Povo e Wikipedia. Pesquisado em 25/10/2026.</p>
+</div>
+</section>
+
+<section class="tab" id="estadio" hidden><div class="wrap"><h2>Estádio</h2>
+  <p class="lead">Major Antônio Couto Pereira, no Alto da Glória, em Curitiba: a casa do Coxa há mais de 90 anos.</p>
+  <dl style="max-width:640px;margin-bottom:32px"><div><dt>Nome completo</dt><dd>Estádio Major Antônio Couto Pereira</dd></div><div><dt>Endereço</dt><dd>Rua Ubaldino do Amaral, 37</dd></div><div><dt>Inauguração</dt><dd>1932</dd></div><div><dt>Nome original</dt><dd>Belfort Duarte</dd></div><div><dt>Capacidade</dt><dd>cerca de 40 mil</dd></div><div><dt>Setor mais moderno</dt><dd>Pro Tork (2014)</dd></div></dl>
+  <h3 style="font-size:34px;color:var(--tit);margin-bottom:14px">A história</h3>
+  <div class="pg">
+   <div><h4>Antes de 1932</h4><p>O clube jogou em campos alugados, como o Parque da Graciosa, a partir de 1916. Quando o contrato acabou, o Coxa saiu em busca de um terreno próprio.</p></div>
+   <div><h4>Fim dos anos 1920</h4><p>O presidente Major Antônio Couto Pereira comprou o terreno no Alto da Glória (as fontes citam 1927 ou 1928) e conseguiu financiar a obra em poucos anos.</p></div>
+   <div><h4>1932</h4><p>Inauguração com vitória por 4 a 2 sobre o América-RJ. As fontes divergem sobre o dia, 15 ou 20 de novembro. O estádio se chamava Belfort Duarte, em homenagem a um ex-jogador conhecido pelo fair play.</p></div>
+   <div><h4>1956 a 1977</h4><p>Uma grande ampliação em concreto armado, pensada nos anos 1950 sob o presidente Aryon Cornelsen, com obras a partir de 1958. Nos anos 1970 ficaram prontas as curvas de três níveis atrás dos gols, e o estádio chegou a ser um dos maiores particulares do Brasil.</p></div>
+   <div><h4>1977</h4><p>Depois da morte do ex-presidente, o estádio passou a se chamar Major Antônio Couto Pereira.</p></div>
+   <div><h4>2005</h4><p>Reforma com cadeiras novas, verdes e brancas, e camarotes na tribuna principal.</p></div>
+   <div><h4>2014</h4><p>Novo setor Pro Tork, que elevou a capacidade para cerca de 40 mil lugares.</p></div>
+   <div><h4>Hoje</h4><p>Além dos jogos do Coxa, já recebeu Brasil x Equador pelas Eliminatórias da Copa e shows como Metallica, Roger Waters e Linkin Park.</p></div>
+  </div>
+  <p class="lead">Fontes: Wikipedia, StadiumDB, StadiumGuide e NSC Total. Pesquisado em 24/10/2026.</p>
+  <h3 style="font-size:34px;color:var(--tit);margin-bottom:14px">Fotos</h3>
+  <div class="grid" id="gFotos"></div>
+</div></section>
+
+<section class="tab" id="proximos" hidden><div class="wrap"><h2>Próximos jogos</h2>
+  <p class="lead">Datas podem ser remarcadas, confirme no site oficial do clube.</p>
+  <div class="scroll"><table><thead><tr><th>Rodada</th><th>Data</th><th>Jogo</th><th>Competição</th></tr></thead><tbody id="tProx"></tbody></table></div></div></section>
+
+<section class="tab" id="resultados" hidden><div class="wrap"><h2>Resultados</h2>
+  <p class="lead">Os 3 últimos jogos do Coritiba no Brasileirão 2026, do mais recente para o mais antigo. Atualizado em 24/10/2026.</p>
+  <div class="scroll"><table><thead><tr><th>Data</th><th>Jogo</th><th>Placar</th><th>Competição</th></tr></thead><tbody id="tRes"></tbody></table></div></div></section>
+
+<section class="tab" id="classificacao" hidden><div class="wrap"><h2>Classificação</h2>
+  <p class="lead">Brasileirão Série A 2026, com 31 ou 32 jogos por time. Dados de 25/10/2026, de Lance, Aqui Esportes e Valor Final. A tabela muda a cada rodada.</p>
+  <div class="pg" id="metas" style="margin-bottom:6px">
+   <div><h4>Para chegar ao G4</h4><p id="mG4n" style="font:900 46px/1 'Big Shoulders Display',Impact,sans-serif;color:var(--tit);margin:0 0 8px">+15 pontos</p><p id="mG4t">O 4º lugar hoje é o Athletico-PR, com 54 pontos, contra 39 do Coxa. Como ele também soma, a meta real é maior. Restam 7 jogos (21 pontos em jogo): na conta ainda é possível, mas improvável.</p></div>
+   <div><h4>Para não ser rebaixado</h4><p id="mZn" style="font:900 46px/1 'Big Shoulders Display',Impact,sans-serif;color:var(--tit);margin:0 0 8px">+14 pontos</p><p id="mZt">Com 53 pontos o Coxa fica livre do rebaixamento, não importa o resultado dos outros. A referência histórica é de cerca de 45 pontos, ou seja, mais 6.</p></div>
+  </div>
+  <p class="lead" id="mNota" style="margin:0 0 22px">Conta de 25/10/2026, com o Coritiba tendo 31 jogos disputados e 7 a jogar. Empate em pontos é tratado como ameaça, porque o desempate não entra na conta.</p>
+  <div class="sub" role="group" aria-label="Tipo de classificação"><button data-v="geral" aria-pressed="true">Geral</button><button data-v="mand" aria-pressed="false">Mandante</button><button data-v="vis" aria-pressed="false">Visitante</button></div>
+  <div id="vGeral"><div class="scroll"><table class="cl"><thead><tr><th>#</th><th>Clube</th><th>P</th><th>J</th><th>V</th><th>E</th><th>D</th><th>GP</th><th>GC</th><th>SG</th></tr></thead><tbody id="tClass"></tbody></table></div></div>
+  <div class="scroll" id="vMand" hidden><table class="cl"><thead><tr><th>#</th><th>Clube</th><th>P</th><th>J</th><th>V</th><th>E</th><th>D</th><th>SG</th></tr></thead><tbody id="tMand"></tbody></table></div>
+  <div class="scroll" id="vVis" hidden><table class="cl"><thead><tr><th>#</th><th>Clube</th><th>P</th><th>J</th><th>V</th><th>E</th><th>D</th><th>SG</th></tr></thead><tbody id="tVis"></tbody></table></div>
+  <p class="lead" id="subNota" hidden style="margin-top:14px">Classificação só com jogos em casa (mandante) ou só fora (visitante), atualizada até a 29ª rodada, em 09/10/2026, segundo o Beira do Campo. Por isso os jogos são menos que na tabela geral. Em casa, o Coxa é o 16º, com 19 pontos. Fora, é o 6º, também com 19 pontos.</p>
+  <div class="leg" id="leg"><span><i style="background:#0a8a4a"></i>Libertadores (1º ao 5º)</span><span><i style="background:#2b6cb0"></i>Sul-Americana (6º ao 11º)</span><span><i style="background:#b3261e"></i>Rebaixamento (17º ao 20º)</span><span><b>Coritiba em destaque</b></span></div>
+  <p class="lead" style="margin-top:14px">O Coxa está em 12º, com 39 pontos, 6 a mais que o primeiro time da zona de rebaixamento. P: pontos, J: jogos, V: vitórias, E: empates, D: derrotas, GP: gols pró, GC: gols contra, SG: saldo de gols. No empate em pontos, o critério é o número de vitórias.</p>
+</div></section>
+
+<section class="tab" id="escalacao" hidden><div class="wrap"><h2>Escalação</h2>
+  <p class="lead">Escalação provável do Coritiba contra o Grêmio (26/10), em 4-3-3, segundo a imprensa. Ela só é confirmada perto do jogo.</p>
+  <div class="pitch" id="campo"></div><p class="bench"><b>Desfalque:</b> Thiago Santos (suspenso). <b>Reservas:</b> <span id="reservas">a definir</span></p></div></section>
+
+<section class="tab" id="pesquisas" hidden><div class="wrap"><h2>Pesquisas</h2><div id="pre"></div></div></section>
+
+<section class="tab" id="imperio" hidden><div class="wrap"><h2>Império Alviverde</h2>
+  <p class="lead">A torcida organizada do Coritiba, fundada em 02/10/1977. O movimento Império 50 Anos já prepara a comemoração do aniversário de 2027.</p>
+  <h3 style="font-size:34px;color:var(--tit);margin-bottom:14px">Canais oficiais</h3>
+  <div class="grid" id="gImpLinks" style="margin-bottom:34px"></div>
+  <h3 style="font-size:34px;color:var(--tit);margin-bottom:14px">Músicas</h3>
+  <p class="lead">Os áudios entram aqui como players, quando você me enviar os arquivos MP3 que tem autorização para usar. As letras ficam no link de cada música, e não são copiadas para o site.</p>
+  <div class="grid" id="gImp"></div>
+  <p class="lead" style="margin-top:22px">Canais retirados do Linktree oficial da torcida. Os títulos das músicas vêm do Letras.mus.br e do Ouvir Música, porque o site oficial não abriu na pesquisa.</p>
+</div></section>
+
+<section class="tab" id="videos" hidden><div class="wrap"><h2>Vídeos</h2>
+  <p class="lead">Os cartões de vídeo abrem uma busca no YouTube em uma nova aba, sempre com os vídeos mais recentes. O último cartão leva ao Instagram da torcida organizada.</p><div class="grid" id="gVid"></div></div></section>
+
+<section class="tab" id="hino" hidden><div class="wrap"><h2>Hino</h2>
+  <div class="aviso" style="max-width:none"><h3 style="font-size:34px;color:var(--tit);margin-bottom:12px">Hino do Coritiba</h3><audio id="audioHino" controls preload="none" style="width:100%" hidden></audio><p id="hinoMsg" style="margin:0;color:var(--suave)">O arquivo MP3 do hino ainda não foi adicionado. Envie o arquivo no chat e ele aparece aqui como um player de áudio.</p></div>
+  <h3 style="font-size:34px;color:var(--tit);margin:28px 0 14px">Links</h3><div class="grid" id="gHino"></div></div></section>
+
+<footer><div class="wrap">Site não oficial, feito por torcedores. O escudo e a marca pertencem ao Coritiba Foot Ball Club.</div></footer>
+
+<script>
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const q=t=>"https://www.youtube.com/results?search_query="+encodeURIComponent(t);
+const g=t=>"https://www.google.com/search?q="+encodeURIComponent(t);
+// EDITE AQUI
+const proximos=[
+ {r:"32ª",d:"26/10, 19h30",j:"Coritiba x Grêmio",c:"Brasileirão"},
+ {r:"38ª",d:"02/12 (confirmar)",j:"Palmeiras x Coritiba",c:"Brasileirão"}
+];
+const resultados=[
+ {d:"17/10",j:"Atlético-MG x Coritiba",p:"1 x 0",c:"Brasileirão, 31ª rodada",s:"d"},
+ {d:"12/10",j:"Coritiba x Botafogo",p:"1 x 1",c:"Brasileirão, 30ª rodada",s:"e"},
+ {d:"08/10",j:"Fluminense x Coritiba",p:"4 x 0",c:"Brasileirão, 29ª rodada",s:"d"}
+];
+const escalacao=["Pedro Morisco","Fabricio Bustos","Tiago Cóser","Jacy","Bruno Melo","Fonseca","Sebastián Gómez","Josué","Pedro Rocha","Lavega","Paulo Roberto"];
+const numeros=["G","D","D","D","D","M","M","M","A","A","A"];
+const pos=[[50,90],[84,72],[62,74],[38,74],[16,72],[30,52],[50,54],[70,52],[20,26],[50,20],[80,26]];
+const reservas=[];
+const videos=[
+ ["Gols e melhores momentos","Coritiba gols melhores momentos"],
+ ["Últimos jogos na íntegra","Coritiba jogo completo 2026"],
+ ["Entrevistas e coletivas","Coritiba entrevista coletiva técnico"],
+ ["Bastidores","Coritiba bastidores vestiário"],
+ ["Torcida no Couto Pereira","Coritiba torcida Couto Pereira"],
+ ["Canal oficial do clube","Coritiba Foot Ball Club canal oficial"]
+];
+document.getElementById("tProx").innerHTML=proximos.map(x=>`<tr><td>${esc(x.r)}</td><td class="p">${esc(x.d)}</td><td>${esc(x.j)}</td><td>${esc(x.c)}</td></tr>`).join("");
+const preCards=[
+ ["Quando e onde","<p>Segunda-feira, 26/10, às 19h30, no Couto Pereira, pela 32ª rodada. Uma das fontes cita 18h30, então confirme no site oficial do clube.</p><p>Transmissão: Premiere.</p>"],
+ ["Situação do Coxa","<p>12º lugar, com 39 pontos. São seis jogos sem vencer (quatro derrotas e dois empates, só 2 pontos de 18). A última vitória foi em 31/08, sobre o Remo.</p><p>A meta interna é chegar a 45 pontos para garantir a permanência na Série A.</p>"],
+ ["Provável escalação","<p>Pedro Morisco; Bustos, Tiago Cóser, Jacy e Bruno Melo; Fonseca, Sebastián Gómez e Josué; Pedro Rocha, Lavega e Paulo Roberto.</p><small>A imprensa traz pequenas variações, e a escalação só sai perto do jogo.</small>"],
+ ["Desfalques","<p>Thiago Santos, suspenso pelo terceiro cartão amarelo.</p>"]
+];
+const preNoticias=[
+ ["Fonseca deve ganhar vaga no meio-campo","O uruguaio Nicolás Fonseca é o principal candidato a substituir Thiago Santos e formar o meio-campo com Sebastián Gómez e Josué. A definição depende dos treinos da semana.","Um Dois Esportes, 22/10"],
+ ["Coxa estuda trocar de fornecedor em 2027","A tendência é a Diadora deixar o clube e ser substituída pela Macron, também italiana.","Um Dois Esportes, 15/10"]
+];
+document.getElementById("pre").innerHTML=`<h3 style="font-size:34px;color:var(--tit);margin-bottom:14px">Pré-jogo: Coritiba x Grêmio</h3><div class="pg">${preCards.map(c=>`<div><h4>${esc(c[0])}</h4>${c[1]}</div>`).join("")}</div><h3 style="font-size:34px;color:var(--tit);margin-bottom:14px">Últimas notícias</h3><div class="pg">${preNoticias.map(n=>`<div><h4>${esc(n[0])}</h4><p>${esc(n[1])}</p><small>${esc(n[2])}</small></div>`).join("")}</div><p class="lead">Informações pesquisadas em 24/10/2026, de veículos como Band, Jornal do Comércio, Máquina do Esporte e Um Dois Esportes.</p>`;
+document.getElementById("tRes").innerHTML=resultados.map(x=>`<tr><td class="p">${esc(x.d)}</td><td>${esc(x.j)}</td><td class="${x.s}">${esc(x.p)}</td><td>${esc(x.c)}</td></tr>`).join("");
+document.getElementById("campo").innerHTML=escalacao.map((n,i)=>`<div class="jog" style="left:${pos[i][0]}%;top:${pos[i][1]}%"><i>${numeros[i]}</i><span>${esc(n)}</span></div>`).join("");
+if(reservas.length)document.getElementById("reservas").textContent=reservas.join(", ");
+document.getElementById("gVid").innerHTML=videos.map(v=>`<a class="card" href="${q(v[1])}" target="_blank" rel="noopener"><h3>${esc(v[0])}</h3><p>Abrir no YouTube</p></a>`).join("")+`<a class="card" href="https://www.instagram.com/imperio_oficial/" target="_blank" rel="noopener"><h3>Instagram: Império Alviverde</h3><p>@imperio_oficial, torcida organizada do Coritiba. Abrir no Instagram</p></a>`;
+const sp=t=>"https://open.spotify.com/search/"+encodeURIComponent(t);
+document.getElementById("gHino").innerHTML=[["Hino no YouTube","Abrir a busca",q("Hino do Coritiba")],["Hino no Spotify","Abrir a busca",sp("Hino do Coritiba")],["Músicas da torcida no YouTube","Abrir a busca",q("músicas da torcida do Coritiba")],["Músicas do Coxa no Spotify","Abrir a busca",sp("Coritiba torcida")]].map(h=>`<a class="card" href="${h[2]}" target="_blank" rel="noopener"><h3 style="font-size:26px">${esc(h[0])}</h3><p>${esc(h[1])} em uma nova aba</p></a>`).join("");
+const fotosEstadio=[]; // fotos enviadas: {src:"data:image/jpeg;base64,...",legenda:"..."}
+document.getElementById("gFotos").innerHTML=fotosEstadio.length?fotosEstadio.map(f=>`<figure style="margin:0"><img src="${f.src}" alt="${esc(f.legenda)}" style="width:100%;border-radius:4px"><figcaption style="font-size:14px;color:var(--suave)">${esc(f.legenda)}</figcaption></figure>`).join(""):`<a class="card" href="https://www.google.com/search?tbm=isch&q=Est%C3%A1dio+Couto+Pereira" target="_blank" rel="noopener"><h3>Fotos do estádio</h3><p>Abrir no Google Imagens, em uma nova aba</p></a>`;
+const tabela=[["Palmeiras",69,32,20,9,3,56,22,"+34"],["Flamengo",67,31,20,7,4,61,25,"+36"],["Cruzeiro",54,32,16,6,10,51,46,"+5"],["Athletico-PR",54,32,15,9,8,50,38,"+12"],["Fluminense",51,32,14,9,9,50,41,"+9"],["Atlético-MG",50,31,14,8,9,42,35,"+7"],["Bahia",49,31,13,10,8,44,39,"+5"],["Santos",45,31,12,9,10,48,46,"+2"],["São Paulo",43,32,12,7,13,37,36,"+1"],["Red Bull Bragantino",41,32,11,8,13,39,38,"+1"],["Botafogo",39,32,10,9,13,44,51,"-7"],["Coritiba",39,31,10,9,12,38,49,"-11"],["Vasco da Gama",38,31,10,8,13,39,45,"-6"],["Vitória",38,32,10,8,14,35,46,"-11"],["Mirassol",37,32,9,10,13,37,45,"-8"],["Internacional",35,32,8,11,13,36,40,"-4"],["Corinthians",33,32,8,9,15,34,42,"-8"],["Grêmio",31,31,7,10,14,34,44,"-10"],["Remo",26,32,5,11,16,34,50,"-16"],["Chapecoense",21,31,4,9,18,32,63,"-31"]];
+document.getElementById("tClass").innerHTML=tabela.map((t,i)=>{const n=i+1;const cl=((t[0]==="Coritiba"?"cori ":"")+(n<=5?"lib":n<=11?"sul":n>=17?"reb":"")).trim();return `<tr class="${cl}"><td>${n}</td><td>${esc(t[0])}</td>${t.slice(1).map(v=>`<td>${esc(v)}</td>`).join("")}</tr>`}).join("");
+const tabMand=[["Fluminense",36,15,11,3,1,"+14"],["Flamengo",33,14,10,3,1,"+18"],["Palmeiras",33,14,10,3,1,"+15"],["Athletico-PR",32,15,9,5,1,"+14"],["Vitória",31,15,10,1,4,"+10"],["Atlético-MG",29,14,8,5,1,"+8"],["Cruzeiro",28,15,8,4,3,"+10"],["São Paulo",27,14,8,3,3,"+10"],["Grêmio",25,14,7,4,3,"+6"],["Bahia",24,14,6,6,2,"+8"],["Vasco da Gama",23,14,7,2,5,"+3"],["Santos",23,15,6,5,4,"+2"],["Mirassol",23,15,6,5,4,"0"],["Red Bull Bragantino",21,14,6,3,5,"+5"],["Botafogo",21,15,5,6,4,"+3"],["Coritiba",19,14,5,4,5,"0"],["Corinthians",18,15,5,3,7,"-1"],["Internacional",17,15,4,5,6,"+1"],["Remo",15,15,3,6,6,"-1"],["Chapecoense",11,13,2,5,6,"-11"]];
+const tabVis=[["Flamengo",28,15,8,4,3,"+14"],["Palmeiras",27,15,7,6,2,"+12"],["Bahia",22,15,6,4,5,"-1"],["Cruzeiro",20,14,6,2,6,"-6"],["Santos",19,14,5,4,5,"0"],["Coritiba",19,15,5,4,6,"-10"],["Athletico-PR",18,14,5,3,6,"-3"],["Red Bull Bragantino",16,15,4,4,7,"-4"],["Atlético-MG",15,15,4,3,8,"-3"],["Fluminense",15,14,3,6,5,"-2"],["Botafogo",14,14,4,2,8,"-8"],["Corinthians",14,14,3,5,6,"-3"],["Internacional",14,14,3,5,6,"-6"],["Vasco da Gama",11,14,2,5,7,"-9"],["Mirassol",10,14,2,4,8,"-9"],["São Paulo",9,15,2,3,10,"-11"],["Remo",9,14,2,3,9,"-14"],["Chapecoense",7,15,1,4,10,"-17"],["Grêmio",5,15,0,5,10,"-14"],["Vitória",5,14,0,5,9,"-20"]];
+const linhaSub=(t,i)=>`<tr class="${t[0]==="Coritiba"?"cori":""}"><td>${i+1}</td><td>${esc(t[0])}</td>${t.slice(1).map(v=>`<td>${esc(v)}</td>`).join("")}</tr>`;
+document.getElementById("tMand").innerHTML=tabMand.map(linhaSub).join("");
+document.getElementById("tVis").innerHTML=tabVis.map(linhaSub).join("");
+document.querySelectorAll(".sub button").forEach(b=>b.addEventListener("click",()=>{
+ const v=b.dataset.v;
+ document.querySelectorAll(".sub button").forEach(x=>x.setAttribute("aria-pressed",x===b));
+ document.getElementById("vGeral").hidden=v!=="geral";document.getElementById("vMand").hidden=v!=="mand";document.getElementById("vVis").hidden=v!=="vis";
+ document.getElementById("leg").hidden=v!=="geral";document.getElementById("subNota").hidden=v==="geral";
+}));
+const LETRAS="https://www.letras.mus.br/imperio-alviverde/";
+const imperioLinks=[["Site oficial","imperioalviverde.com.br","https://www.imperioalviverde.com.br/"],["Império TV","Canal no YouTube","https://www.youtube.com/channel/UCuFBmwAdSGEqSWSytVy1dUg/featured"],["Instagram","@imperio_oficial","https://www.instagram.com/imperio_oficial/"],["Facebook","imperio1977","https://www.facebook.com/imperio1977/"],["X (Twitter)","@iav1977oficial","https://twitter.com/iav1977oficial"],["Loja virtual","Loja oficial","https://www.imperioalviverde.com.br/loja-virtual/"],["Império 50 Anos","imperio50anos.com.br","https://imperio50anos.com.br/"]];
+document.getElementById("gImpLinks").innerHTML=imperioLinks.map(l=>`<a class="card" href="${l[2]}" target="_blank" rel="noopener"><h3 style="font-size:26px">${esc(l[0])}</h3><p>${esc(l[1])}. Abre em uma nova aba</p></a>`).join("");
+const imperioMusicas=[{t:"Coxa é alegria"},{t:"Sou Verdão"},{t:"Meu Coritiba"},{t:"Nossa Torcida",letra:LETRAS+"1428057/"},{t:"Tá Ligado",letra:LETRAS+"1997575/"},{t:"Maior do Sul"},{t:"Maior da Capital"},{t:"Explode Coração"},{t:"Paixão Eterna"},{t:"Paixão Que Vem de Dentro"},{t:"Novo Hino"},{t:"Meu Verdão Vai Jogar"},{t:"Vamos Vamos Coritiba"},{t:"Vamos Vamos Meu Verdão"}]; // src: "data:audio/mpeg;base64,..." quando o MP3 for enviado
+document.getElementById("gImp").innerHTML=imperioMusicas.map(m=>`<div style="background:var(--card);border-left:6px solid var(--verde);padding:16px 18px"><h3 style="font-size:24px;margin-bottom:8px">${esc(m.t)}</h3>${m.src?`<audio controls preload="none" src="${m.src}" style="width:100%"></audio>`:`<p style="margin:0 0 8px;color:var(--suave);font-size:14px">Áudio ainda não adicionado.</p>`}<p style="margin:0;font-size:15px"><a href="${m.letra||LETRAS}" target="_blank" rel="noopener">Ver letra</a></p></div>`).join("");
+const HINO_MP3=""; // endereço do MP3 do hino, preenchido quando o arquivo for enviado
+if(HINO_MP3){const a=document.getElementById("audioHino");a.src=HINO_MP3;a.hidden=false;document.getElementById("hinoMsg").hidden=true;}
+const tabs=[...document.querySelectorAll("nav button")];
+function ir(id,push){if(!document.getElementById(id))id="inicio";
+ document.querySelectorAll("section.tab").forEach(s=>s.hidden=s.id!==id);
+ tabs.forEach(b=>b.setAttribute("aria-selected",b.dataset.t===id));
+ try{if(push)history.replaceState(null,"","#"+id)}catch(e){}window.scrollTo(0,0)}
+tabs.forEach(b=>b.addEventListener("click",()=>ir(b.dataset.t,true)));
+addEventListener("hashchange",()=>ir(location.hash.slice(1)));
+ir(location.hash.slice(1)||"inicio");
+</script>
+</body>
+</html>
